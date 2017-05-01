@@ -28,3 +28,10 @@ cd ..
 openvpn --genkey --secret keys/ta.key
 cd /etc/openvpn/
 wget https://raw.githubusercontent.com/MaxDistructo/ShellScripts/master/conf/server.conf
+xterm -e 'nano /etc/sysctl.conf' & read -n 1 -p "Remove the # from the line net.ipv4.ip_forward = 1. Press ENTER to continue."
+sysctl -p
+cd /etc
+wget https://raw.githubusercontent.com/MaxDistructo/ShellScripts/master/conf/firewall-openvpn-rules.sh
+chmod 700 firewall-openvpn-rules.sh
+chown root firewall-openvpn-rules.sh
+xterm -e 'nano /etc/network/interfaces' & read -n 1 -p "Final Step: under 'iface eth0 inet dhcp' for wired connections or 'iface wlan0 inet manual' for wireless"
