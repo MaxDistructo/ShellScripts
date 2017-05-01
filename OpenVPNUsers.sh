@@ -1,7 +1,7 @@
 #!bin/bash
 sudo -s
-read -p "Input the number of users you would like to create. They will be named Client# for each one." users
-read -p "Input the password for your Clients to use." password
+read -p "Input the number of users you would like to create. They will be named Client# for each one." "users"
+read -p "Input the password for your Clients to use." "password"
 for i  in {1..$users}
 do
 #Untested because you need to enter pass phrase twice and IDK on the second input what it prompts you for
