@@ -26,3 +26,5 @@ send "$password"
 cd ..
 ./build-dh
 openvpn --genkey --secret keys/ta.key
+cd /etc/openvpn/
+wget https://raw.githubusercontent.com/MaxDistructo/ShellScripts/master/conf/server.conf
