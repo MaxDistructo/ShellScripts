@@ -27,7 +27,6 @@ expect Name [changeme]:
 send "."
 expect Email Address [mail@host.domain]:
 send "."
-echo "Follow the instructions in the other window. This will create your certificate for a secure  network"
 read -p "Input a Name for your Server" "servername"
 spawn ./build-key-server "$servername"
 expect Commmon Name
