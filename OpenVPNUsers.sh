@@ -34,4 +34,5 @@ cd /etc
 wget https://raw.githubusercontent.com/MaxDistructo/ShellScripts/master/conf/firewall-openvpn-rules.sh
 chmod 700 firewall-openvpn-rules.sh
 chown root firewall-openvpn-rules.sh
-xterm -e 'nano /etc/network/interfaces' & read -n 1 -p "Final Step: under 'iface eth0 inet dhcp' for wired connections or 'iface wlan0 inet manual' for wireless"
+xterm -e 'nano /etc/network/interfaces' & read -n 1 -p "Final Step: under 'iface eth0 inet dhcp' for wired connections or 'iface wlan0 inet manual' for wireless connections. Scroll to the end of the line and hit ENTER then TAB. Now type 'pre-up /etc/firewall-openvpn-rules.sh'. Finally, hit ENTER in this window and your pi will restart to finish setup."
+sudo restart
