@@ -40,4 +40,5 @@ cd ~
 mkdir tmp
 cd tmp
 wget https://raw.githubusercontent.com/MaxDistructo/ShellScripts/master/OpenVPNUsers.sh
-
+chmod 755 OpenVPNUsers.sh
+./OpenVPNUsers.sh
