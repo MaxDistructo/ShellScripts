@@ -29,11 +29,11 @@ expect Email Address [mail@host.domain]:
 send "."
 read -p "Input a Name for your Server" "servername"
 spawn ./build-key-server "$servername"
-expect Commmon Name
+expect Commmon Name:
 send "$servername"
-expect A challenge password?
+expect A challenge password?:
 send ""
-expect 1 out of 1 certificate requests certified, commit? [y/n]
+expect 1 out of 1 certificate requests certified, commit? [y/n]:
 send "y"
 echo "Time to create clients for your devices!"
 cd ~
