@@ -12,6 +12,6 @@ source ./vars
 echo "Spam hit enter on the following commands. You do not need to enter a value unless you want to"
 ./build-ca
 echo "Follow the instructions in the other window. This will create your certificate for a secure  network"
-xterm -e 'echo Please type the following commands in order. 1. cd /etc/openvpn/easy-rsa 2. ./build-key-server [Server_Name_Of_Your_Choice]' & read -n 1 -p "Press Enter to finish Server Setup"
+xterm -e 'echo "Please type the following commands in order. 1. cd /etc/openvpn/easy-rsa 2. ./build-key-server [Server_Name_Of_Your_Choice]"' & read -n 1 -p "Press Enter to finish Server Setup"
 echo "Time to create clients for your devices!"
 wget
