@@ -24,3 +24,7 @@ cd ~
 git clone https://github.com/Just-Some-Bots/MusicBot.git MusicBot -b master
 cd MusicBot
 sudo -H pip3.6 install --upgrade -r requirements.txt
+read -p "What is your bot_token?" "bottoken"
+read -p "What is your Owner ID?" "ownerid"
+read -p "What would you like for your command prefix?" "prefix"
+echo -e 
