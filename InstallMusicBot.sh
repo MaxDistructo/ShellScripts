@@ -27,4 +27,4 @@ sudo -H pip3.6 install --upgrade -r requirements.txt
 read -p "What is your bot_token?" "bottoken"
 read -p "What is your Owner ID?" "ownerid"
 read -p "What would you like for your command prefix?" "prefix"
-echo -e 
+echo -e [Credentials]/nToken = $bottoken/n[Permissions]/nOwnerID = $ownerid/n[Chat]/nCommandPrefix = !/n[MusicBot]/nDefaultVolume = 0.15/nWhiteListCheck = no/nSkipsRequired = 4/nSkipRatio = 0.5/nSaveVideos = yes
