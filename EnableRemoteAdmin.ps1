@@ -1,4 +1,4 @@
-Set-Item -Path WSMan:\localhost\Client\TrustedHosts -Value '*'
+Set-Item -Path WSMan:\localhost\Client\TrustedHosts -Value '172.18.*.*'
 $url = "https://raw.githubusercontent.com/MaxDistructo/ShellScripts/master/Comic%20Sans%20MS.reg"
 $output = "c:\ComicSansMS.reg"
 $wc = New-Object System.Net.WebClient
