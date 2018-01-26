@@ -31,8 +31,7 @@ else {
     # Exit from the current, unelevated, process
     Exit;
 }
-Set-Item -Path WSMan:\localhost\Client\TrustedHosts -Value '172.18.*.*' -Concatenate -AllowRemoteShellAccess true #Set Bessie to be a trusted host.
-Set-Item -Path WSMan:\localhost\Client\TrustedHosts -Value '' -Concatenate -AllowRemoteShellAccess true #Set any lan computer to be a trusted host 
+Set-Item -Path WSMan:\localhost\Client\TrustedHosts -Value '172.18.*.*' -Concatenate -AllowRemoteShellAccess true  
 $url = "https://raw.githubusercontent.com/MaxDistructo/ShellScripts/master/Comic%20Sans%20MS.reg"
 $output = "c:\ComicSansMS.reg"
 $wc = New-Object System.Net.WebClient
