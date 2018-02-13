@@ -12,7 +12,7 @@ function Pause
 
 while($i -lt $urlArray.Count){ 
 $url = $urlArray[$i]
-if($url -contains '*.msi'){
+if($url -Like '*.msi'){
 $output = "program" + $i + ".msi"
 Invote-WebRequest -Uri $url -OutFile $output
 Write-Output "Sucessfully Downloaded Program"
