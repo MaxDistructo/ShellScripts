@@ -14,11 +14,12 @@ while($i -lt $urlArray.Count){
 $url = $urlArray[$i]
 if($url -Like '*.msi'){
 $output = "program" + $i + ".msi"
-Invote-WebRequest -Uri $url -OutFile $output
+Invoke-WebRequest -Uri $url -OutFile $output
 Write-Output "Sucessfully Downloaded Program"
 cd C:\tmp
-$programName = "-f C:\tmp\" + $output
-Start-Process msiexec.exe -ArgumentList'/I /norestart' + $programName -Wait -NoNewWindow
+$programName = "c:\tmp\" + $output
+msiexec /I $programName
+Pause
 }
 else{
 $output = "program" + $i + ".exe"
