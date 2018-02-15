@@ -1,7 +1,8 @@
 $ErrorActionPreference = "SilentlyContinue"
-md C:\tmp
 $i = 0
-$urlArray = "https://stubdownloader.cdn.mozilla.net/builds/firefox-stub/en-US/win/8cfa56b0b4b4976670240aba0a71db342a748e760fdd498f42ad9d529202bd25/Firefox%20Installer.exe","https://notepad-plus-plus.org/repository/7.x/7.5.4/npp.7.5.4.Installer.x64.exe","http://www.7-zip.org/a/7z1801-x64.msi"
+$currentLocation = Convert-Path .
+$programTxtLocation = $currentLocation + "\programs.txt"
+$text = Get-Content -Path $programTxtLocation
 $one = 1
 $i2 = 0
 
@@ -10,8 +11,10 @@ function Pause
 	Read-Host 'Press Enter once the Program has been installed'| Out-Null
 }
 
-while($i -lt $urlArray.Count){ 
-$url = $urlArray[$i]
+md C:\tmp
+cd C:\tmp
+while($i -lt $text.Count){ 
+$url = $text[$i]
 if($url -Like '*.msi'){
 $output = "program" + $i + ".msi"
 Invoke-WebRequest -Uri $url -OutFile $output
@@ -37,5 +40,6 @@ else{
 $i = $i + $one
 }
 }
+cd $currentLocation
 Remove-Item -path c:\tmp -recurse
 Write-Output "Program Installations Complete"
