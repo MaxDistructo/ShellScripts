@@ -4,7 +4,6 @@ $currentLocation = Convert-Path .
 $programTxtLocation = $currentLocation + "\programs.txt"
 $text = Get-Content -Path $programTxtLocation
 $one = 1
-$i2 = 0
 
 function Pause
 {
@@ -18,7 +17,7 @@ $url = $text[$i]
 if($url -Like '*.msi'){
 $output = "program" + $i + ".msi"
 Invoke-WebRequest -Uri $url -OutFile $output
-Write-Output "Sucessfully Downloaded Program"
+Write-Output "Successfully Downloaded Program"
 cd C:\tmp
 $programName = "c:\tmp\" + $output
 msiexec /I $programName
@@ -33,12 +32,7 @@ $programName = ".\program" + $i + ".exe"
 Invoke-Expression $programName
 Pause
 }
-if(-NOT ($i2 -eq 1)){
-$i2 = $i2 + $one
-}
-else{
 $i = $i + $one
-}
 }
 cd $currentLocation
 Remove-Item -path c:\tmp -recurse
