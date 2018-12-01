@@ -6,6 +6,5 @@ mount --make-rslave /mnt/gentoo/sys
 mount --rbind /dev /mnt/gentoo/dev
 mount --make-rslave /mnt/gentoo/dev 
 chroot /mnt/gentoo /bin/bash 
-source /etc/profile
-export PS1="(chroot) ${PS1}"
+echo " Run the Following Commands to Complete Init: \n source /etc/profile \n export PS1=\"(chroot) ${PS1}\""
 mount /dev/sda2 /boot
