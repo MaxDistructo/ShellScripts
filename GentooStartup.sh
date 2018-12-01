@@ -8,3 +8,4 @@ mount --make-rslave /mnt/gentoo/dev
 chroot /mnt/gentoo /bin/bash 
 source /etc/profile
 export PS1="(chroot) ${PS1}"
+mount /dev/sda2 /boot
