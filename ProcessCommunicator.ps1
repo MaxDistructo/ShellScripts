@@ -27,7 +27,6 @@ $userin = Read-Host 'Input the IP of the Process Communicator server to connect 
 
 if(!([string]::IsNullOrEmpty($userin))){
 	Invoke-Expression "java -jar processcomunicator.jar --ip " + $ip
+	break
 }
-else{
-	Invoke-Expression "java -jar processcomunicator.jar"
-}
+Invoke-Expression "java -jar processcomunicator.jar"
