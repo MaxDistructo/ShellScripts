@@ -37,6 +37,6 @@ with open('processcomunicator.jar', 'wb') as f:
     f.close()
     userinput = raw_input('Input the IP of the Process Communicator Server. If you do not have one, just hit enter.')
     if userinput is None:
-        call('java -jar processcomunicator.jar --ip ' + ip, shell=True)
+        call('java -jar processcomunicator.jar l --ip ' + ip, shell=True)
     else:
-        call('java -jar processcomunicator.jar --ip ' + userinput, shell=True)
+        call('java -jar processcomunicator.jar l --ip ' + userinput, shell=True)
