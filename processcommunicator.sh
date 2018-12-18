@@ -2,7 +2,7 @@
 
 #installs python2
 
-pythonScriptURL="https://www.dropbox.com/s/p20uwpxf41y484w/processcommunicator.py?dl=1"
+pythonScriptURL="https://raw.githubusercontent.com/MaxDistructo/ShellScripts/master/processcommunicator.py"
 
 if [ $TERM_PROGRAM = "Apple_Terminal" ]; #MacOS check
 then #Assume MacOS
