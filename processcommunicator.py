@@ -32,6 +32,7 @@ if "Linux" in osType:
     call('sudo add-apt-repository ' + aptRepositoryOracleJava + ' -y', shell=True)  #Always attempt to install Oracle Java as Linux users usually use OpenJDK which does not have libs for JavaFX
     call('sudo apt-get update', shell=True)
     call('sudo apt-get install oracle-java8-installer -y', shell=True)
+    call('sudo apt-get install oracle-java8-set-default -y', shell=True)
 with open('processcomunicator.jar', 'wb') as f:
     f.write(urllib2.urlopen(jarLocation).read())
     f.close()
