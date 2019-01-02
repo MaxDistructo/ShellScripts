@@ -6,9 +6,11 @@ $input = ""
 Write-Output "Process Communicator - Configuration Wizard"
 Write-Output ""
 Write-Output "Checking for Java"
-
-if(Get-Command "java.exe" -ErrorAction SilentlyContinue -eq $null)
+Get-Command "java.exe" -ErrorAction SilentlyContinue -eq $null
+if(!$error)
 {
+	
+} else{
 	Write-Host "Java was not found in your PATH."
 	Write-Host "Installing the required Java version."
 	md C:\tmp
