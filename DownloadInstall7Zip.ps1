@@ -26,7 +26,7 @@ Pause
 elseif($url -Like "*.ps1"){
 	$output = "script" + $i + ".ps1"
 wget $url -outfile $output
-cmd.exe "powershell.exe -executionpolicy bypass -file" + $output
+powershell.exe -executionpolicy bypass -file $output
 Pause
 }
 else{
