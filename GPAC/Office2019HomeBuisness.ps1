@@ -1,3 +1,1 @@
-wget "https://github.com/MaxDistructo/ShellScripts/raw/master/GPAC/setup.exe" -outfile "setup.exe"
-wget "https://raw.githubusercontent.com/MaxDistructo/ShellScripts/master/GPAC/GPAC.xml" -outfile "GPAC.xml"
-.\setup.exe /configure GPAC.xml
+\\192.168.175.11\Installs\GPAC\setup.exe /configure \\192.168.175.11\Installs\GPAC\GPAC.xml
