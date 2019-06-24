@@ -1,8 +1,4 @@
-https://admdownload.adobe.com/bin/live/readerdc_en_xa_crd_install.exe
 https://www.dropbox.com/s/p0ajxq80p8nngbm/ChromeSetup.exe?dl=1
 http://dn.ringcentral.com/data/web/download/RCMeetings/1210/RCMeetingsClientSetup.msi
-https://www.dropbox.com/s/brsto3q9f6zjphv/RingCentral-19.05.2-x64.msi?dl=1
 http://downloads.ringcentral.com/sp/RingCentralPhone-19.2.2.msi
-https://www.dropbox.com/s/9g7nm1ex8k82ohl/Agent_Install.MSI?dl=1
-https://www.dropbox.com/s/tq0ile4pu7bw64u/GPAC.msi?dl=1
 https://raw.githubusercontent.com/MaxDistructo/ShellScripts/master/GPAC/Office2019HomeBuisness.ps1
