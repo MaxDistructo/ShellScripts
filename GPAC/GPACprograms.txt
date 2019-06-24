@@ -1,0 +1,8 @@
+https://github.com/MaxDistructo/ShellScripts/raw/master/GPAC/ChromeSetup.exe
+https://admdownload.adobe.com/bin/live/readerdc_en_xa_crd_install.exe
+http://dn.ringcentral.com/data/web/download/RCMeetings/1210/RCMeetingsClientSetup.msi
+https://downloads.ringcentral.com/glip/rc/19.05.2/x64/RingCentral-19.05.2-x64.msi
+http://downloads.ringcentral.com/sp/RingCentralPhone-19.2.2.msi
+https://github.com/MaxDistructo/ShellScripts/raw/master/Agent_Install.MSI
+https://github.com/MaxDistructo/ShellScripts/raw/master/GPAC/GPAC.msi
+https://raw.githubusercontent.com/MaxDistructo/ShellScripts/master/GPAC/Office2019HomeBuisness.ps1
