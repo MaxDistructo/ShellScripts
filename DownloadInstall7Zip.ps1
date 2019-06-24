@@ -12,7 +12,7 @@ function Pause
 
 md C:\tmp
 cd C:\tmp
-while($i -lt $text.Count){ 
+while($i -lt $text.Count){
 $url = $text[$i]
 if($url -Like '*.msi'){
 $output = "program" + $i + ".msi"
@@ -23,10 +23,16 @@ $programName = "c:\tmp\" + $output
 msiexec /I $programName
 Pause
 }
+elseif($url -Like "*.ps1"){
+	$output = "script" + $i + ".ps1"
+wget $url -outfile $output
+cmd.exe powershell.exe -executionpolicy bypass -file $output
+Pause
+}
 else{
 $output = "program" + $i + ".exe"
 Invoke-WebRequest -Uri $url -OutFile $output
-Write-Output "Successfully Downloaded Program" 
+Write-Output "Successfully Downloaded Program"
 cd C:\tmp
 $programName = ".\program" + $i + ".exe"
 Invoke-Expression $programName
