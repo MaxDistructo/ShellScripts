@@ -25,11 +25,8 @@
   Get-PCInfo.ps1 -Computer test-pc
 #>
 
-Param(
-[string]$Computer
-)
 
-$Connection = Test-Connection $Computer -Count 1 -Quiet
+$Connection = Test-Connection $env:computername -Count 1 -Quiet
 
 if ($Connection -eq "True"){
 
