@@ -30,17 +30,17 @@ $Connection = Test-Connection $env:computername -Count 1 -Quiet
 
 if ($Connection -eq "True"){
 
-   $ComputerHW = Get-WmiObject -Class Win32_ComputerSystem -ComputerName $Computer | select Manufacturer,Model | FT -AutoSize
+   $ComputerHW = Get-WmiObject -Class Win32_ComputerSystem -ComputerName $env:computername | select Manufacturer,Model | FT -AutoSize
 
-   $ComputerCPU = Get-WmiObject win32_processor -ComputerName $Computer | select DeviceID,Name | FT -AutoSize
+   $ComputerCPU = Get-WmiObject win32_processor -ComputerName $env:computername | select DeviceID,Name | FT -AutoSize
 
-   $ComputerRam_Total = Get-WmiObject Win32_PhysicalMemoryArray -ComputerName $Computer | select MemoryDevices,MaxCapacity | FT -AutoSize
+   $ComputerRam_Total = Get-WmiObject Win32_PhysicalMemoryArray -ComputerName $env:computername | select MemoryDevices,MaxCapacity | FT -AutoSize
 
-   $ComputerRAM = Get-WmiObject Win32_PhysicalMemory -ComputerName $Computer | select DeviceLocator,Manufacturer,PartNumber,Capacity,Speed | FT -AutoSize
+   $ComputerRAM = Get-WmiObject Win32_PhysicalMemory -ComputerName $env:computername | select DeviceLocator,Manufacturer,PartNumber,Capacity,Speed | FT -AutoSize
 
-   $ComputerDisks = Get-WmiObject -Class Win32_LogicalDisk -Filter "DriveType=3" -ComputerName $Computer | select DeviceID,VolumeName,Size,FreeSpace | FT -AutoSize
+   $ComputerDisks = Get-WmiObject -Class Win32_LogicalDisk -Filter "DriveType=3" -ComputerName $env:computername | select DeviceID,VolumeName,Size,FreeSpace | FT -AutoSize
 
-   $ComputerOS = (Get-WmiObject Win32_OperatingSystem -ComputerName $Computer).Version
+   $ComputerOS = (Get-WmiObject Win32_OperatingSystem -ComputerName $env:computername).Version
 
    switch -Wildcard ($ComputerOS){
       "6.1.7600" {$OS = "Windows 7"; break}
@@ -51,7 +51,7 @@ if ($Connection -eq "True"){
       default {$OS = "Unknown Operating System"; break}
    }
 
-   Write-Host "Computer Name: $Computer"
+   Write-Host "Computer Name: $env:computername"
    Write-Host "Operating System: $OS"
    Write-Output $ComputerHW
    Write-Output $ComputerCPU
