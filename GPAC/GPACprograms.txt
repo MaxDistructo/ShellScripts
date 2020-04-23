@@ -1,4 +1,0 @@
-https://www.dropbox.com/s/p0ajxq80p8nngbm/ChromeSetup.exe?dl=1
-http://dn.ringcentral.com/data/web/download/RCMeetings/1210/RCMeetingsClientSetup.msi
-http://downloads.ringcentral.com/sp/RingCentralPhone-19.2.2.msi
-https://raw.githubusercontent.com/MaxDistructo/ShellScripts/master/GPAC/Office2019HomeBuisness.ps1
