@@ -1,2 +1,2 @@
 #!/bin/bash
-java -jar ./java-programs/ysoserial.jar
+java -jar ~/bin/java-programs/ysoserial.jar $1 $2
